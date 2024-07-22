@@ -1,6 +1,7 @@
 #include "VirtualMemory.h"
 #include "PhysicalMemory.h"
 
+int get_Paddress(uint64_t address);
 
 void VMInitialize() {
     // writes 0 on root
@@ -15,6 +16,13 @@ int VMread(uint64_t virtualAddress, word_t *value) {
 }
 
 
-int VMwrite(uint64_t virtualAddress, word_t value) {
+int VMwrite(uint64_t virtualAddress, word_t value)
+{
+    int addr = get_Paddress(virtualAddress);
+}
 
+
+int get_Paddress(uint64_t address) {
+    int prev_padd = 0;
+    return 0;
 }
